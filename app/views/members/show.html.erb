@@ -1,0 +1,9 @@
+<h2><%= @staff.name%></h2>
+<h2><%= @staff.last_name%></h2>
+<h2><%= @staff.title%></h2>
+<h2><%= @staff.email%></h2>
+
+<%= form_tag "/members/#{@staff.id}", method: :delete do %>
+<input type="submit" value="Destroy Staff">
+
+<% end %>

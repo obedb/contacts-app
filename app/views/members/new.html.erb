@@ -1,0 +1,23 @@
+<h1>New Staff</h1>
+
+<%= form_tag "/members", method: :post do %>
+
+  <div>
+    First Name: <input type="text" name="name">
+  </div>
+
+   <div>
+    Last Name: <input type="text" name="last_name">
+  </div>
+
+   <div>
+    Title: <input type="text" name="title">
+  </div>
+
+   <div>
+    Email: <input type="text" name="email">
+  </div>
+
+  <input type="submit" value="Create a new contact">
+
+  <% end %> 
