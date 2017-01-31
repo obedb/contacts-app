@@ -2,17 +2,14 @@ class MembersController < ApplicationController
 
   def index
     @staff = Member.all
-    render "index.html.erb"
   end 
 
   def show
     staff_id = params[:id]
     @staff = Member.find_by(id: staff_id)
-    render "show.html.erb"
   end 
 
   def new
-    render "new.html.erb"
   end 
 
   def create
@@ -23,13 +20,11 @@ class MembersController < ApplicationController
       email: params["email"]
       )
     staff.save
-    render "create.html.erb"
   end 
 
   def edit
     staff_id = params[:id]
     @staff = Member.find_by(id: staff_id)
-    render"edit.html.erb"
   end 
 
   def update
@@ -40,14 +35,12 @@ class MembersController < ApplicationController
     staff.title = params[:title]
     staff.email = params[:email]
     staff.save
-    render "update.html.erb"
   end 
 
   def destroy
     staff_id = params[:id]
     staff = Member.find_by(id: staff_id)
     staff.destroy
-    render "destroy.html.erb"
   end 
 
 
